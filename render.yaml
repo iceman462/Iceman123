@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: francis-isaac-ai-bot
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_CHAT_MODEL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: UPDATE_MANIFEST_URL
+        sync: false
+      - key: NODE_ENV
+        value: "production"
+      - key: PORT
+        value: "10000"

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#02050d">
+<meta name="description" content="FRANCIS AND ISAAC AI BOT — modern AI creation workspace.">
+<link rel="manifest" href="/manifest.json">
+<title>FRANCIS AND ISAAC AI BOT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <button class="icon-btn menu" id="menuBtn">☰</button>
+    <a class="brand" href="#home" aria-label="Francis and Isaac AI Bot home">
+      <div class="brand-orb">FI</div>
+      <div class="brand-copy"><strong>FRANCIS <i>AND</i> ISAAC</strong><b>AI BOT</b><small>Create&nbsp; • &nbsp;Edit&nbsp; • &nbsp;Generate&nbsp; • &nbsp;Explore</small></div>
+    </a>
+    <div class="top-actions"><button class="pro">♛ PRO</button><button class="icon-btn" id="themeBtn">☾</button><button class="icon-btn admin-trigger" id="adminBtn" title="Admin">♟</button></div>
+  </header>
+
+  <aside class="drawer" id="drawer">
+    <button data-scroll="home">⌂ Home</button><button data-scroll="tools">▦ Tools</button><button data-scroll="history">◷ History</button><button data-scroll="profile">♙ Profile</button>
+  </aside>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-art"></div>
+      <div class="hero-copy">
+        <div class="hero-badge">⚡ NEXT-GEN AI WORKSPACE</div>
+        <h1>Turn Your Ideas Into<br><span>Amazing Creations!</span></h1>
+        <p>Image, Video, Voice, Code &amp; More — All in One AI Bot.</p>
+        <div class="signature">Powered by Francis &amp; Isaac <b>♛</b></div>
+      </div>
+    </section>
+
+    <section class="chat-card" id="chat">
+      <div class="chat-main">
+        <div class="section-icon blue">▧</div>
+        <div class="section-copy"><div class="title-row"><h2>AI Chat</h2><span>NEW</span></div><p>Chat with our advanced AI assistant. Get answers, solve problems, and more!</p></div>
+        <form class="chat-form" id="chatForm"><textarea id="chatInput" rows="1" placeholder="Type your message here..."></textarea><button>➤</button></form><div class="chat-lock" id="chatLock"><div><b>🔒 Admin Chat Locked</b><span>Only the website administrator can use AI Chat.</span><button id="unlockChat">Admin Login</button></div></div>
+      </div>
+      <div class="chat-features"><div>💬 <b>Ask Anything</b></div><div>⚡ <b>Get Instant Answers</b></div><div>🧠 <b>Smart &amp; Helpful</b></div><div>◷ <b>24/7 Support</b></div></div>
+      <div class="chat-response" id="chatResponse"></div>
+    </section>
+
+    <section class="studios">
+      <article class="studio image-studio" id="imageStudio"><div class="studio-icon">▧</div><div class="studio-text"><div class="title-row"><h2>Image Studio</h2><span>AI POWERED</span></div><p>Turn your ideas into stunning images with AI.</p></div><button class="arrow" data-open="image">→</button><textarea id="imagePrompt" placeholder="✦ Describe the image you want..."></textarea><button class="gradient-btn" id="imageBtn">✦ Generate Image →</button><div class="mini-tools"><button data-insert-image="Text to Image">✎ Text to Image</button><button data-insert-image="Image Enhance">⌁ Image Enhance</button><button data-insert-image="Remove Background">✂ Remove Background</button><button data-insert-image="AI Art">◉ AI Art</button></div><div id="imageResult" class="media-result"></div></article>
+      <article class="studio video-studio" id="videoStudio"><div class="studio-icon">▶</div><div class="studio-text"><div class="title-row"><h2>Video Studio</h2><span>NEW</span></div><p>Create amazing videos from text or images.</p></div><button class="arrow" data-open="video">→</button><textarea id="videoPrompt" placeholder="✦ Describe your video..."></textarea><div class="video-options"><select id="videoModel"><option>sora-2-pro</option><option>sora-2</option></select><select id="videoSeconds"><option value="12">◷ 12 seconds</option><option value="8">◷ 8 seconds</option><option value="4">◷ 4 seconds</option></select></div><button class="gradient-btn" id="videoBtn">▷ Generate Video →</button><div class="mini-tools"><button>▣ Text to Video</button><button>▧ Image to Video</button><button>♙ AI Avatars</button><button>✦ Video Enhance</button></div><div id="videoStatus" class="video-status"></div><video id="videoResult" controls playsinline></video></article>
+      <article class="studio voice-studio" id="voiceStudio"><div class="studio-icon green">◉</div><div class="studio-text"><div class="title-row"><h2>Voice mode</h2><span>NEW</span></div><p>Speak to Francis &amp; Isaac AI using your phone microphone.</p></div><div class="voice-art">)))<b>◉</b>((((</div><button class="gradient-btn green-btn" id="voiceBtn">🎙 Start listening</button><div id="voiceText" class="voice-text"></div></article>
+    </section>
+
+    <section class="tools-section" id="tools">
+      <div class="section-heading"><div><h2>🚀 More Amazing Tools</h2><p>Everything you need, all in one place.</p></div><span>12+ TOOLS</span></div>
+      <div class="tool-grid">
+        <button class="tool blue" data-tool="chat"><i>💬</i><div><b>AI Chat</b><small>Ask anything</small></div>→</button>
+        <button class="tool purple" data-tool="code"><i>&lt;/&gt;</i><div><b>Code Generator</b><small>Build your ideas</small></div>→</button>
+        <button class="tool orange" data-tool="tts"><i>🔊</i><div><b>Text to Speech</b><small>Turn text to voice</small></div>→</button>
+        <button class="tool green" data-tool="stt"><i>🎙</i><div><b>Speech to Text</b><small>Convert voice to text</small></div>→</button>
+        <button class="tool pink" data-tool="files"><i>▤</i><div><b>File Analyzer</b><small>Analyze your files</small></div>→</button>
+        <button class="tool cyan" data-tool="study"><i>🎓</i><div><b>Study Helper</b><small>Learn &amp; improve</small></div>→</button>
+        <button class="tool purple" data-tool="design"><i>◉</i><div><b>Design Studio</b><small>Create graphics</small></div>→</button>
+        <button class="tool blue" data-tool="research"><i>⌕</i><div><b>Research Assistant</b><small>Find useful information</small></div>→</button>
+        <button class="tool pink" data-tool="music"><i>♫</i><div><b>Music Generator</b><small>Create AI music</small></div>→</button>
+        <button class="tool cyan" data-tool="avatar"><i>♙</i><div><b>AI Avatars</b><small>Create an AI avatar</small></div>→</button>
+        <button class="tool blue" data-tool="web"><i>◎</i><div><b>Web Tools</b><small>Useful online tools</small></div>→</button>
+        <button class="tool orange" data-tool="translate"><i>文</i><div><b>Translator</b><small>Translate instantly</small></div>→</button>
+      </div>
+    </section>
+
+
+    <section class="admin-panel" id="adminPanel">
+      <div class="admin-head"><div><span class="hero-badge">ADMIN CONTROL CENTER</span><h2>Website Status &amp; Updates</h2><p>Private controls for the administrator.</p></div><button class="admin-logout" id="logoutBtn">Log out</button></div>
+      <div class="admin-status-grid">
+        <div><span>Website</span><b id="siteStatus">Checking…</b></div><div><span>AI API</span><b id="apiStatus">Checking…</b></div><div><span>Version</span><b id="siteVersion">—</b></div><div><span>Uptime</span><b id="siteUptime">—</b></div>
+      </div>
+      <div class="admin-actions"><button id="refreshStatus">↻ Check Website Status</button><button id="checkUpdates">✦ Check for Updates</button><button id="copyUpdateRequest">⧉ Copy Update Request</button></div>
+      <div class="update-box" id="updateBox">Update Center ready. When you want a new version from ChatGPT, use <b>Copy Update Request</b> and send the generated request with your current ZIP.</div>
+    </section>
+
+    <section class="contact" id="profile">
+      <div class="wa-icon">◉</div><div><h3>Contact Us on WhatsApp</h3><p>Need help? Chat with us now!</p></div><a href="https://wa.me/233545274761" target="_blank" rel="noopener">☎ 0545274761</a><div class="trust"><span>⚡<b>Fast</b></span><span>♢<b>Secure</b></span><span>✓<b>Reliable</b></span><span>◷<b>24/7</b></span></div><div class="contact-brand">Francis &amp; Isaac<small>AI BOT</small></div>
+    </section>
+    <section class="features" id="history"><div>☁ <b>Cloud Powered</b><small>Access from anywhere</small></div><div>∞ <b>Unlimited Usage</b><small>No limits, just creativity</small></div><div>♢ <b>100% Secure</b><small>Your data is safe with us</small></div></section>
+  </main>
+
+  <nav class="bottom-nav"><button class="active" data-scroll="home">⌂<small>Home</small></button><button data-scroll="tools">▦<small>Tools</small></button><button data-scroll="history">◷<small>History</small></button><button data-scroll="profile">♙<small>Profile</small></button></nav>
+</div>
+<div class="modal-backdrop" id="adminModal"><div class="admin-modal"><button class="modal-close" id="closeAdmin">×</button><div class="admin-logo">♟</div><span class="hero-badge">PRIVATE ADMIN ACCESS</span><h2>Administrator Login</h2><p>Enter the admin password to unlock AI Chat and the website control center.</p><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Admin password"><button class="gradient-btn" id="loginBtn">Unlock Admin →</button><div class="login-error" id="loginError"></div></div></div><div class="toast" id="toast"></div>
+<script src="/script.js"></script>
+</body>
+</html>

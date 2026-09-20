@@ -1,0 +1,13 @@
+{
+  "name": "francis-isaac-ai-bot",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "openai": "^6.0.0"
+  }
+}
